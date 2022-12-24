@@ -41,14 +41,14 @@ public class BoardService {
    }
    
    // boardOne 
-   public Board getBoardOne(Board board)  {
+   public Board getBoardOne(int no)  {
 	      boardDao = new BoardDao();
 	      Connection conn = null;
-	      ArrayList<Board> list = null;
+	      Board board = null;
 	      try {
 	         conn = DBUtil.getConnection();
 	         conn.setAutoCommit(false);
-	         board = boardDao.selectOne(conn, board);
+	         board = boardDao.selectOne(conn, no);
 	         conn.commit();
 	      } catch (Exception e) {
 	         try {

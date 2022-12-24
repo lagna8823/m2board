@@ -17,26 +17,19 @@
 	</head>
 	<body>
 	      <table border="1">
-	         <%
-	            for(Board b : board) {
-	         %>   
-	         
 	            <tr>
 	               <td>title</td>
-	               <td><%=b.getTitle()%></td>
+	               <td><%=board.getTitle()%></td>
 	            </tr>
 	            <tr>
 	               <td>content</td>
-	               <td><%=b.getContent()%></td>
+	               <td><%=board.getContent()%></td>
 	            </tr>
 	         
 	      </table>
 	      <div>
-	         <a href="<%=request.getContextPath()%>/model1/m1ModifyBoardForm.jsp?no=<%=b.getNo()%>">수정</a>
-	         <a href="<%=request.getContextPath()%>/model1/m1RemoveBoardAction.jsp?no=<%=b.getNo()%>">삭제</a>
+	         <a href="<%=request.getContextPath()%>/model1/m1ModifyBoardForm.jsp?no=<%=board.getNo()%>">수정</a>
+	         <a href="<%=request.getContextPath()%>/model1/m1RemoveBoardAction.jsp?no=<%=board.getNo()%>">삭제</a>
 	      </div>
-	      	<%
-	            }
-	         %>
 	</body>
 </html>

@@ -44,16 +44,16 @@ public class BoardDao {
    }
    
    // m1 BoardOne 상세보기 select
-   public Board selectOne(Connection conn, Board board) throws Exception {
-	   String sql = "SELECT no, title FROM board WHERE no=?";
+   public Board selectOne(Connection conn, int no) throws Exception {
+	   Board board = new Board();
+	   String sql = "SELECT no, title, content FROM board WHERE no=?";
 	   PreparedStatement stmt = conn.prepareStatement(sql);
 	   stmt.setInt(1, board.getNo());
 	   ResultSet rs = stmt.executeQuery();
 	   while(rs.next()) {
-		   Board b = new Board();
-		   b.setNo(rs.getInt("no"));
-		   b.setTitle(rs.getString("title"));
-		   Board.add(b);
+		   board.setNo(rs.getInt("no"));
+		   board.setTitle(rs.getString("title"));
+		   board.setTitle(rs.getString("title"));
 	   }
 	   return board;
    }
