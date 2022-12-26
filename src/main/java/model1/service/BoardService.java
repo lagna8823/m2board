@@ -122,7 +122,7 @@ public class BoardService {
    }
 
    // modify 수정
-   public int modifyBoard(Board paramBoard)  {
+   public int modifyBoard(Board paramBoard) {
       boardDao = new BoardDao();
       Connection conn = null;
       int resultRow = 0;

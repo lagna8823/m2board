@@ -12,7 +12,7 @@ import model1.service.BoardService;
 
 @WebServlet("/mvc/RemoveBoardActionController")
 public class RemoveBoardActionController extends HttpServlet {
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int no = Integer.parseInt(request.getParameter("no"));
 		int resultRow =0;
 		
@@ -20,9 +20,9 @@ public class RemoveBoardActionController extends HttpServlet {
 	    resultRow = boardService.romoveBoard(no);
 	    if(resultRow !=0){
 	   		// 뷰가 있따!
-	   		response.sendRedirect(request.getContextPath() + "/WEB-INF/view/mvcBoardList.jsp");
+	   		response.sendRedirect(request.getContextPath() + "/mvc/BoardListController");
 	   		return;
 	   	}
-		response.sendRedirect(request.getContextPath() + "/WEB-INF/view/mvcBoardOne.jsp?no="+no);
+		response.sendRedirect(request.getContextPath() + "/mvc/BoardOneController?no="+no);
 	}
 }

@@ -16,7 +16,7 @@
 		<h1>MODEL1 BOARD LIST</h1>
 		
 		<div>
-			<a href="<%=request.getContextPath()%>/model1/m1AddBoardForm.jsp">글입력</a>
+			<a href="<%=request.getContextPath()%>/mvc/AddBoardFormController">글입력</a>
 		</div>
 		<table border="1">
 			<thead>
@@ -32,7 +32,7 @@
 						<tr>
 							<td><%=b.getNo()%></td>
 							<td>
-								<a href='<%=request.getContextPath()%>/mvc/m1BoardOne.jsp?no=<%=b.getNo()%>'>
+								<a href="<%=request.getContextPath()%>/mvc/BoardOneController?no=<%=b.getNo()%>">
 									<%=b.getTitle()%>
 								</a>
 							</td>

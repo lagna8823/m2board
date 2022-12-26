@@ -28,8 +28,8 @@
 	         
 	      </table>
 	      <div>
-	         <a href="<%=request.getContextPath()%>/model1/m1ModifyBoardForm.jsp?no=<%=board.getNo()%>">수정</a>
-	         <a href="<%=request.getContextPath()%>/model1/m1RemoveBoardAction.jsp?no=<%=board.getNo()%>">삭제</a>
+	         <a href="<%=request.getContextPath()%>/mvc/ModifyBoardFormController?no=<%=board.getNo()%>">수정</a>
+	         <a href="<%=request.getContextPath()%>/mvc/RemoveBoardActionController?no=<%=board.getNo()%>">삭제</a>
 	      </div>
 	</body>
 </html>

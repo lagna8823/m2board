@@ -15,7 +15,7 @@
 	<title>ModifyBoard</title>
 	</head>
 	<body>
-	      <form action="<%=request.getContextPath()%>/model1/m1ModifyBoardAction.jsp" method="post">
+	      <form action="<%=request.getContextPath()%>/mvc/ModifyBoardActionController" method="post">
 	     
 	      <table border="1">
 	      	 <%

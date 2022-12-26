@@ -16,7 +16,7 @@ public class BoardDao {
       // Class.forName("org.mariadb.jdbc.Driver");
       // Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/mvc","root","java1234");
       
-      String sql = "SELECT no, title FROM board";
+      String sql = "SELECT no, title FROM board"; 
       PreparedStatement stmt = conn.prepareStatement(sql);
       ResultSet rs = stmt.executeQuery();
       // ResultSet -> List 가공작업
@@ -48,12 +48,12 @@ public class BoardDao {
 	   Board board = new Board();
 	   String sql = "SELECT no, title, content FROM board WHERE no=?";
 	   PreparedStatement stmt = conn.prepareStatement(sql);
-	   stmt.setInt(1, board.getNo());
+	   stmt.setInt(1, no);
 	   ResultSet rs = stmt.executeQuery();
 	   while(rs.next()) {
 		   board.setNo(rs.getInt("no"));
 		   board.setTitle(rs.getString("title"));
-		   board.setTitle(rs.getString("title"));
+		   board.setContent(rs.getString("content"));
 	   }
 	   return board;
    }

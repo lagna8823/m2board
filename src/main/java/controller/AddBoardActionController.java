@@ -29,10 +29,10 @@ public class AddBoardActionController extends HttpServlet {
 	   
 	   if(resultRow !=0){ 
 	         // 뷰가 있따!
-	         response.sendRedirect(request.getContextPath() + "/WEB-INF/view/mvcBoardList.jsp");
+	         response.sendRedirect(request.getContextPath() + "/mvc/BoardListController");
 	         return;
 	      }
-	   response.sendRedirect(request.getContextPath() + "/WEB-INF/view/m1AddBoardForm.jsp");
+	   response.sendRedirect(request.getContextPath() + "/mvc/BoardListController");
        return;
 	}
 }

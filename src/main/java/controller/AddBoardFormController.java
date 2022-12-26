@@ -7,10 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //C -> V
-@WebServlet("/mvc/AddBoardController.jsp")
+@WebServlet("/mvc/AddBoardFormController")
 public class AddBoardFormController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/view/addBoardForm.jsp").forward(request, response);
+		request.setCharacterEncoding("utf-8");
+		request.getRequestDispatcher("/WEB-INF/view/mvcAddBoardForm.jsp").forward(request, response);
 	}
-
 }

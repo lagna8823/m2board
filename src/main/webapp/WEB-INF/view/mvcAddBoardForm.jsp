@@ -13,7 +13,7 @@ C -> V
 	</head>
 	<body>
 	   <h1>게시글 입력</h1>
-	   <form action="<%=request.getContextPath()%>/jsp/jspAddBoardAction.jsp" method="post">
+	   <form action="<%=request.getContextPath()%>/mvc/AddBoardActionController" method="post">
 			<table border="1">
 				<tr>
 					<th>title</th>
