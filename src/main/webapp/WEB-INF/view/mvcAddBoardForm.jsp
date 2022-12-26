@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- 
 C -> M -> V
 C -> M  ========> redirect =========> 다른 컨트롤러를 호출 / C:액션처럼 컨트롤러
@@ -13,7 +14,7 @@ C -> V
 	</head>
 	<body>
 	   <h1>게시글 입력</h1>
-	   <form action="<%=request.getContextPath()%>/mvc/AddBoardActionController" method="post">
+	   <form action="${pageContext.request.contextPath}/mvc/AddBoardActionController" method="post">
 			<table border="1">
 				<tr>
 					<th>title</th>
